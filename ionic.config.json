@@ -1,5 +1,7 @@
 {
   "name": "lineleap-app",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
