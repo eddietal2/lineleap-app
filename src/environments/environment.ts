@@ -2,9 +2,15 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const ip = '192.168.0.169';
+const mobileIp = '172.20.10.2';
+const baseUrl = `http://${ip}:3000`;
+
 export const environment = {
-  production: false
+  production: false,
+  url: baseUrl,
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

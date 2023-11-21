@@ -1,5 +1,5 @@
 import { IonicModule } from '@ionic/angular';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
@@ -15,7 +15,6 @@ import { CustomComponentsModule } from '../components/custom-components.module';
     HomePageRoutingModule,
     CustomComponentsModule
   ],
-  declarations: [HomePage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [HomePage]
 })
 export class HomePageModule {}
