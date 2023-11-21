@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VendorsServiceService } from 'src/services/vendors/vendors-service.service';
 
 @Component({
   selector: 'app-vendors',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['vendors.page.scss']
 })
 export class VendorsPage {
-
-  constructor() {}
+  test = "LOL";
+  constructor(
+    private vendorsService: VendorsServiceService
+  ) {}
 
 }
