@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { OrderHelpComponent } from './modals/order-help/order-help.component';
+import { VenueAndSeatComponent } from './modals/venue-and-seat/venue-and-seat.component';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +9,68 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
+  loggedIn = false;
+  seatLocated = true;
 
-  constructor() {}
+  constructor(
+    private modalCtrl: ModalController
+  ) {}
+
+  ngOnInit() {
+    this.locateSeat()
+  }
+
+  /**
+   * 
+   */
+  async locateSeat() {
+    console.log('Locating seat ...');
+    if(!this.seatLocated) {
+      
+      const modal = await this.modalCtrl.create({
+        component: VenueAndSeatComponent,
+      });
+      modal.present();
+
+      const { data, role } = await modal.onWillDismiss();
+
+      if (role === 'confirm') {
+        // this.message = `Hello, ${data}!`;
+    }
+    } else {
+
+    }
+  }
+
+  /**
+   * 
+   */
+  logIn() {
+
+  }
+
+  /**
+   * 
+   */
+  async help() {
+    const modal = await this.modalCtrl.create({
+      component: OrderHelpComponent,
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      // this.message = `Hello, ${data}!`;
+    }
+  }
+
+  /**
+   * 
+   */
+  vendors() {
+
+  }
+
 
 }

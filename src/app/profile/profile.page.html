@@ -1,13 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="spc-5"></div>
+  <ion-row *ngIf="this.loggedIn" class="ion-justify-content-center">
+    <ion-col size="11" class="ion-text-center">
+      <div style="background: #999; height: 50px; width: 100px; margin: 0 auto;">Logo</div>
+      <div class="user-illustration"></div>
+      <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+        Log in or create a Line Leap account
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="!this.loggedIn" class="ion-justify-content-center">
+    <ion-col size="11" class="ion-text-center">
+      <div style="background: #999; height: 50px; width: 100px; margin: 0 auto;">Logo</div>
+      <div class="user-illustration"></div>
+      <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+        Log in or create a Line Leap account
+      </ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>

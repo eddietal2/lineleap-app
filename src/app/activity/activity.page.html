@@ -1,4 +1,25 @@
 <ion-content>
-  <app-seat-info-toolbar></app-seat-info-toolbar>
+  <ion-content>
+    <div class="spc-5"></div>
+    <ion-row *ngIf="this.loggedIn" class="ion-justify-content-center">
+      <app-seat-info-toolbar></app-seat-info-toolbar>
+      <ion-col size="11" class="ion-text-center">
+        <div style="background: #999; height: 50px; width: 100px; margin: 0 auto;">Logo</div>
+        <div class="user-illustration"></div>
+        <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+          Log in or create a Line Leap account
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!this.loggedIn" class="ion-justify-content-center">
+      <ion-col size="11" class="ion-text-center">
+        <div style="background: #999; height: 50px; width: 100px; margin: 0 auto;">Logo</div>
+        <div class="user-illustration"></div>
+        <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+          Log in or create a Line Leap account
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-content>
   
 </ion-content>

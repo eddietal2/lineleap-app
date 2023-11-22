@@ -1,4 +1,69 @@
 <ion-content>
   <app-seat-info-toolbar></app-seat-info-toolbar>
 
+  <!-- Pending Orders -->
+    <section>
+      <!-- Header & P/D Button -->
+      <!-- User -->
+      <!-- Order(s) Placed -->
+      <!-- Help Button -->
+      <ion-row class="ion-justify-content-center" *ngIf="this.loggedIn">
+        <ion-col size="5.5">
+          <h2>Pending Orders</h2>
+        </ion-col>
+        <ion-col size="5.5">
+          <div class="d-p-wrapper"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center"  *ngIf="!this.loggedIn">
+        <ion-col size="11">
+          <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+            Log in or create a Line Leap account
+          </ion-button>
+          <ion-button (click)="help()" expand="block" class="green-btn-outline" shape="round">
+            Help
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </section>
+
+  <!-- Previous Orders -->
+    <section>
+      <!-- Header -->
+      <!-- Previous order slider || No previous orders message -->
+      <!-- Previous orders button -->
+      <ion-row class="ion-justify-content-center" *ngIf="this.loggedIn">
+        <ion-col size="11">
+          <h2>Previous Orders</h2>
+          <div class="no-order-bg">
+            No previous orders at this location.
+          </div>
+          <ion-button (click)="vendors()" expand="block" class="green-btn-outline" shape="round">
+            View profile activity
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </section>
+
+  <!-- Popular Vendors Orders -->
+    <section>
+      <!-- Header -->
+      <!-- 3 popular vendors at current venue -->
+      <!-- View all vendors button -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+          <h2>Popular Vendors at this Location</h2>
+          <app-vendor-preview></app-vendor-preview>
+          <app-vendor-preview></app-vendor-preview>
+          <app-vendor-preview></app-vendor-preview>
+          <ion-button (click)="vendors()" expand="block" class="green-btn-outline" shape="round">
+            View all Vendors
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </section>
+    <div class="bottom-page-spc"></div>
+
 </ion-content>

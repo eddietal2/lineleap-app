@@ -1,7 +1,7 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
 <ion-row class="ion-justify-content-center">
-  <ion-col class="seat-info" size="11">
-    <h2>Your Seat</h2>
+  <ion-col size="11">
+    <h2>Current Seats</h2>
     <ion-row class="ion-justify-content-center">
       <ion-col size="4">
         <b>Section</b><br>
@@ -16,17 +16,17 @@
         <span>14</span><br>
       </ion-col>
     </ion-row>
-  </ion-col>
-  <ion-col class="seat-map" size="11">
-    
+    <ion-input type="text" placeholder="Section"></ion-input>
+    <ion-input type="text" placeholder="Row"></ion-input>
+    <ion-input type="text" placeholder="Seat"></ion-input>
   </ion-col>
 </ion-row >
 <ion-row class="modal-btm-btns ion-justify-content-center">
   <ion-col size="11">
-    <ion-button (click)="editSeatModal()" expand="block" class="green-btn-gradient" shape="round">
-      Edit Seat
+    <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+      Next
     </ion-button>
-    <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+    <ion-button (click)="close()" expand="block" class="green-btn-outline" shape="round">
       Close
     </ion-button>
   </ion-col>

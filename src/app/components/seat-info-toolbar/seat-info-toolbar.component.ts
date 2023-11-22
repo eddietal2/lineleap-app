@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { TicketInfoComponent } from 'src/app/home/modals/ticket-info/ticket-info.component';
 
 @Component({
   selector: 'app-seat-info-toolbar',
@@ -7,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeatInfoToolbarComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController) { }
 
   ngOnInit() {}
+
+  async openTicketInfo() {
+    const modal = await this.modalCtrl.create({
+      component: TicketInfoComponent,
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      // this.message = `Hello, ${data}!`;
+    }
+
+  }
 
 }

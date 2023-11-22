@@ -1,3 +1,17 @@
-<p>
-  order-help works!
-</p>
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-row class="ion-justify-content-center">
+  <ion-col size="11">
+    
+  </ion-col>
+</ion-row >
+<ion-row class="modal-btm-btns ion-justify-content-center">
+  <ion-col size="11">
+    <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+      Next
+    </ion-button>
+    <ion-button (click)="close()" expand="block" class="green-btn-outline" shape="round">
+      Close
+    </ion-button>
+  </ion-col>
+</ion-row >
+

@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
-
 @Component({
-  selector: 'app-venue-and-seat',
-  templateUrl: './venue-and-seat.component.html',
-  styleUrls: ['./venue-and-seat.component.scss'],
+  selector: 'app-update-seat',
+  templateUrl: './update-seat.component.html',
+  styleUrls: ['./update-seat.component.scss'],
 })
-export class VenueAndSeatComponent  implements OnInit {
-  pageHeader = "Help";
-
-
+export class UpdateSeatComponent  implements OnInit {
+  pageHeader = "Update Seat";
 
   constructor(
     public modalCtrl: ModalController) { }

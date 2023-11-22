@@ -1,0 +1,21 @@
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #D8D8D8;
+    background: #F8F8F8;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+}
+.vendor-logo {
+    background: url('../../../assets/photos/pizza-ph.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 70px; width: 70px;
+    text-align: center;
+    display: inline-block;
+}
+p {
+    font-size: 0.8rem;
+    color: #999;
+}

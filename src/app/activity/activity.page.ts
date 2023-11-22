@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['activity.page.scss']
 })
 export class ActivityPage {
+  loggedIn = false;
 
-  constructor() {}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  logIn() {
+
+  }
 
 }

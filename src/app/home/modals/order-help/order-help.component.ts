@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-order-help',
@@ -6,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-help.component.scss'],
 })
 export class OrderHelpComponent  implements OnInit {
+  pageHeader = "Help";
 
-  constructor() { }
+  constructor(
+    public modalCtrl: ModalController) {}
 
   ngOnInit() {}
+
+  next() {
+    
+  }
+
+  close() {
+    return this.modalCtrl.dismiss(null, 'cancel');
+  }
+
 
 }

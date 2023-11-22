@@ -24,3 +24,82 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+// Headers 
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+h2 {
+    margin-bottom: 1rem;  
+}
+
+// Ionic
+ion-input {
+    border-radius: 5px;
+    border: 1px solid #CACACA;
+    background: #FBFBFB;
+    margin: 0.5rem 0;
+    --padding-start: 8px;
+}
+ion-button {
+    height: 50px;
+}
+
+// Buttons
+.green-btn-gradient {
+    margin: 1rem 0;
+    --color: #fff;
+    --background: linear-gradient(180deg, #11CF00 0%, #0C9700 100%);
+}
+.green-btn-outline {
+    margin: 1rem 0;
+    --color: #11CF00;
+    --background: #fff;
+    --border-style: solid;
+    --border-width: 2px;
+    --border-color: #11CF00;
+}
+.grey-btn {
+    --color: #999;
+    --background: #F9F9F9;
+}
+
+.modal-btm-btns{
+    // align-items: baseline;
+    margin-bottom: 10vh;
+}
+
+// Spacers 
+.spc-1 {
+    height: 1em;
+}
+.spc-2 {
+    height: 2em;
+}
+.spc-5 {
+    height: 5em;
+}
+.bottom-page-spc {
+    margin-bottom: 30vh;
+}
+
+// UI
+.no-order-bg {
+    border-radius: 5px;
+    background: #F8F8F8;
+    padding: 1rem;
+    border: 1px solid #D8D8D8;
+    color: #999;
+    text-align: center;
+}
+
+// Fullscreen Horizontal slider
+.h-slides {
+    width: 100%;
+    // background: #cecece;
+}

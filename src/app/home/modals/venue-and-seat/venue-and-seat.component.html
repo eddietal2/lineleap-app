@@ -1,3 +1,70 @@
-<p>
-  venue-and-seat works!
-</p>
+<ion-row class=" ion-justify-content-center">
+  <ion-col size="11">
+    <h1>Venue & Seat Location</h1>
+    <swiper-container class="h-slides">
+      <swiper-slide>
+        <div class="slide-info">
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/location_2.png" alt="">
+          </div>
+          <h3>Line Leap needs Location</h3>
+          <p>Before you can order, we need to establish your sear and venue locations</p>
+        </div>
+        <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+          Next
+        </ion-button>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide-info">
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/location.png" alt="">
+          </div>
+          <h3>Is this your location?</h3>
+        </div>
+        <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+          Yes
+        </ion-button>
+        <ion-button (click)="close()" expand="block" class="green-btn-outline" shape="round">
+          No
+        </ion-button>
+        <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+          Close
+        </ion-button>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide-info">
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/location.png" alt="">
+          </div>
+          <h3>Manual Location and Venue Input</h3>
+          <ion-input type="text" placeholder="Venue Name"></ion-input>
+          <ion-input type="text" placeholder="City"></ion-input>
+          <ion-input type="text" placeholder="State"></ion-input>
+        </div>
+        <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+          Next
+        </ion-button>
+        <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+          Close
+        </ion-button>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide-info">
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/gold-ticket.png" alt="">
+          </div>
+          <h4>Let's get your seat information</h4>
+          <ion-input type="text" placeholder="Section"></ion-input>
+          <ion-input type="text" placeholder="Row"></ion-input>
+          <ion-input type="text" placeholder="Seat #"></ion-input>
+        </div>
+        <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+          Next
+        </ion-button>
+        <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+          Close
+        </ion-button>
+      </swiper-slide>
+    </swiper-container>
+  </ion-col>
+</ion-row>
