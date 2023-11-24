@@ -6,3 +6,25 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.pro-pic {
+    background: url('../../assets/photos/sasha_pro_pic.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 70px; width: 70px;
+    text-align: center;
+    display: inline-block;
+}
+
+h2, p {
+    margin: 0;
+}
+.profile-btn {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(153, 153, 153, 0.50);
+    background: #F8F8F8;
+    margin: 0.5em 0;
+}

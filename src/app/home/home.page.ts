@@ -83,26 +83,19 @@ export class HomePage {
    */
   vendors() {
     this.router.navigateByUrl('/tabs/vendors');
-
   }
   profileActivity() {
     this.router.navigateByUrl('/tabs/activity');
-
   }
-  
   viewOrderInfo() {
     this.router.navigateByUrl('/order-info');
-
   }
-
   setDelivery() {
     this.isDelivery = true;
   }
-
   setPickup() {
     this.isDelivery = false;
   }
-
   async confirmOrder() {
     const modal = await this.modalCtrl.create({
       component: ConfirmComponent,
