@@ -1,0 +1,15 @@
+.code-input-wrapper {
+    height: 100px;
+    width: 100%;
+    // background: #999;
+
+    ion-input {
+        display: inline-block;
+        height: 55px;
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        border: 1px solid #999;
+        margin: 0em;
+    }
+}

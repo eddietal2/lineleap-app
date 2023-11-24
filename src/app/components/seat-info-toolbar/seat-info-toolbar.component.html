@@ -1,8 +1,9 @@
-<ion-row class="wrapper ion-justify-content-center">
+<ion-row class="wrapper ion-justify-content-center ion-align-items-center">
   <!-- Seat Info -->
   <ion-col size="9">
     <p>Little Caesar's Arena</p>
-    <ion-row class="ion-justify-content-center">
+    <ion-row 
+    style="position: relative; bottom: 0.8em; right: 0.3em;">
       <ion-col size="4">
         <b>Section</b><br>
         <span>213</span><br>
@@ -20,9 +21,10 @@
   <!-- Ticket Icon -->
   <ion-col size="2" class="ion-text-center">
     <div (click)="openTicketInfo()">
-      <img src="../../../assets/icon/ticket-info.svg" alt="Ticket Info Icon">
+      <ion-icon size="large" style="color: #999;" name="ticket-outline"></ion-icon>      
       <br>
-      <span style="font-size: 0.65rem; color: #999;">Ticket Info</span>
+      <span style="font-size: 0.65rem; color: #999; position: relative; bottom: 8px;">
+        Ticket Info</span>
     </div>
   </ion-col>
 </ion-row>

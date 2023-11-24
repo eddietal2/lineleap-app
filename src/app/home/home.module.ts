@@ -11,6 +11,7 @@ import { OrderHelpComponent } from './modals/order-help/order-help.component';
 import { VenueAndSeatComponent } from './modals/venue-and-seat/venue-and-seat.component';
 import { TicketInfoComponent } from './modals/ticket-info/ticket-info.component';
 import { UpdateSeatComponent } from './modals/update-seat/update-seat.component';
+import { ConfirmComponent } from './modals/confirm/confirm.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { UpdateSeatComponent } from './modals/update-seat/update-seat.component'
     OrderHelpComponent, 
     VenueAndSeatComponent, 
     TicketInfoComponent,
-    UpdateSeatComponent
+    UpdateSeatComponent,
+    ConfirmComponent
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,0 +1,43 @@
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <swiper-container #confirmOrderSwiper>
+        <!-- 4 Digit Code -->
+        <swiper-slide>
+          <p>Please input a Confirmation Code in order to complete this order.</p>
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/confirm-order.png" alt="" height="200">
+          </div>
+          <ion-row class="code-input-wrapper ion-align-items-center">
+            <ion-col size="3">
+              <ion-input type="text" placeholder="-"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+              <ion-input type="text" placeholder="-"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+              <ion-input type="text" placeholder="-"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+              <ion-input type="text" placeholder="-"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-button (click)="next()" expand="block" class="green-btn-gradient" shape="round">
+            Next
+          </ion-button>
+        </swiper-slide>
+        <!-- Success -->
+        <swiper-slide>
+          <div class="ion-text-center">
+            <img src="../../../../assets/illustrations/order-complete.png" alt="" height="200">
+            <h3>Order has been completed!</h3>
+          </div>
+          <ion-button (click)="done()" expand="block" class="green-btn-gradient" shape="round">
+            Done
+          </ion-button>
+        </swiper-slide>
+      </swiper-container>
+    </ion-col>
+  </ion-row>
+</ion-content>

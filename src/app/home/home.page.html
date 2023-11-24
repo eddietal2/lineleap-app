@@ -4,22 +4,80 @@
 
   <!-- Pending Orders -->
     <section>
-      <!-- Header & P/D Button -->
-      <!-- User -->
-      <!-- Order(s) Placed -->
-      <!-- Help Button -->
-      <ion-row class="ion-justify-content-center" *ngIf="this.loggedIn">
+      <!-- Login -->
+      <ion-row class="ion-justify-content-center" *ngIf="!this.loggedIn">
+        <ion-col size="11">
+          <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
+            Log in or create a Line Leap account
+          </ion-button>
+          <ion-button (click)="help()" expand="block" class="green-btn-outline" shape="round">
+            Help
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <!-- Header & D/P Buttons -->
+      <ion-row class="ion-justify-content-center ion-align-items-center" *ngIf="this.loggedIn">
         <ion-col size="5.5">
           <h2>Pending Orders</h2>
         </ion-col>
         <ion-col size="5.5">
-          <div class="d-p-wrapper"></div>
+          <ion-toolbar class="d-p-wrapper">
+            <ion-buttons slot="end">
+              <ion-button [ngClass]="this.isDelivery ? 'green-btn-gradient' : 'green-btn-outline'" (click)="setDelivery()">
+                Delivery
+              </ion-button>
+              <ion-button [ngClass]="this.isDelivery ? 'green-btn-outline' : 'green-btn-gradient'" (click)="setPickup()">
+                Pickup
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-justify-content-center"  *ngIf="!this.loggedIn">
+      <!-- Profile Info -->
+      <ion-row class="ion-justify-content-center ion-align-items-center" *ngIf="this.loggedIn">
+        <ion-col size="2">
+          <div class="pro-pic"></div>
+        </ion-col>
+        <ion-col size="9">
+          <h3>Sasha Williams</h3>
+        </ion-col>
+      </ion-row>
+      <!-- Order(s) -->
+      <ion-row class="ion-justify-content-center" *ngIf="this.loggedIn">
+        <ion-col class="no-orders" *ngIf="!this.orderPlaced" size="11">
+          No Orders Placed
+        </ion-col>
+        <ion-col class="orders" *ngIf="this.orderPlaced" size="11"> 
+          <ion-list>
+            <ion-item>
+              <ion-label>Confirmation #</ion-label>
+              <h3>XCSDW124D</h3>
+            </ion-item>
+            <ion-item>
+              <ion-label>Order Status</ion-label>
+              <b style="color: #6C00C1;">Out for Delivery</b>
+            </ion-item>
+            <ion-item>
+              <ion-label>Delivery Preference</ion-label>
+              <b style="color: #333;">Meet in Aisle</b>
+            </ion-item>
+          </ion-list>
         <ion-col size="11">
-          <ion-button (click)="logIn()" expand="block" class="green-btn-gradient" shape="round">
-            Log in or create a Line Leap account
+          <h4>Order Items</h4>
+          <p style="font-size: 1em;">Concessions - South Corridor</p>
+          <div class="spc-1"></div>
+            <app-order-item-preview *ngFor="let item of orderItems"></app-order-item-preview>
+        </ion-col>
+        </ion-col>
+      </ion-row>
+      <!-- Buttons -->
+      <ion-row *ngIf="this.loggedIn" class="ion-justify-content-center">
+        <ion-col size="11">
+          <ion-button *ngIf="this.orderPlaced" (click)="viewOrderInfo()" expand="block" class="grey-btn" shape="round">
+            View Order Info
+          </ion-button>
+          <ion-button *ngIf="this.orderPlaced" (click)="confirmOrder()" expand="block" class="green-btn-gradient" shape="round">
+            Confirm Delivery
           </ion-button>
           <ion-button (click)="help()" expand="block" class="green-btn-outline" shape="round">
             Help
@@ -36,11 +94,28 @@
       <ion-row class="ion-justify-content-center" *ngIf="this.loggedIn">
         <ion-col size="11">
           <h2>Previous Orders</h2>
-          <div class="no-order-bg">
+          <div *ngIf="prevOrders.length == 0" class="no-order-bg">
             No previous orders at this location.
           </div>
-          <ion-button (click)="vendors()" expand="block" class="green-btn-outline" shape="round">
-            View profile activity
+          <swiper-container
+            slides-per-view="1.35"
+            *ngIf="prevOrders.length > 0">
+            <swiper-slide *ngFor="let order of prevOrders">
+              <ion-row class="prev-order-wrapper ion-align-items-center">
+                <ion-col size="3" class="ion-text-center">
+                  <div class="prev-vendor-logo"></div>
+                </ion-col>
+                <ion-col size="9">
+                  <h6>Concessions - South Corridor</h6>
+                  <p>$15 - 1 Large Pizza</p>
+                  <p>$15 - 1 Large Pizza</p>
+                  <p>$15 - 1 Large Pizza</p>
+                </ion-col>
+              </ion-row>
+            </swiper-slide>
+          </swiper-container>
+          <ion-button (click)="profileActivity()" expand="block" class="green-btn-outline" shape="round">
+            View Profile Activity
           </ion-button>
         </ion-col>
       </ion-row>

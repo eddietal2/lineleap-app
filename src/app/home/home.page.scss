@@ -1,6 +1,67 @@
+
 .d-p-wrapper {
-    background: #999;
-    border-radius: 100px;
-    height: 50px;
+    --background: none;
     width: 100%;
+
+    ion-button {
+        height: 32px;
+        width: 72px;
+        font-size: 0.75em;
+        --border-radius: 100px;
+    }
+}
+.prev-order-wrapper {
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 85%);
+    background: #F8F8F8;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+}
+.pro-pic{
+    background: url('../../assets/photos/sasha_pro_pic.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 50px; width: 50px;
+    text-align: center;
+    display: inline-block;
+
+}
+.prev-vendor-logo {
+    background: url('../../assets/photos/pizza-ph.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 50px; width: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.no-orders{
+    border-radius: 5px;
+    padding: 1em;
+    border: 1px solid #D8D8D8;
+    color: #999;
+    text-align: center;
+    background: #F8F8F8;
+}
+.orders {
+    ion-list {
+        ion-item {
+            --background: none;
+        }
+    }
+}
+p {
+    font-size: 0.8rem;
+    color: #999;
+    margin: 0.2em 0;
+}
+
+swiper-container {
+
+    swiper-slide {
+        margin: 0em 1em 0em 0em;
+    }
 }

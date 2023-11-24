@@ -4,6 +4,9 @@ ion-tab-bar {
 
     ion-tab-button {
         --color: #B7B7B7;
+        ion-icon {
+            font-size: 2em;
+        }
     }
     ion-label {
         font-size: 0.8em;
