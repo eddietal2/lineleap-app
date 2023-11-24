@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-order-info',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-info.page.scss'],
 })
 export class OrderInfoPage implements OnInit {
-
-  constructor() { }
+  pageHeader = "New Order";
+  constructor(
+    public modalCtrl: ModalController,
+    public router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+  placeOrder() {
+
+  }
+  close() {
+    this.router.navigateByUrl('/tabs');;
   }
 
 }

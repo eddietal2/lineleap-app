@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { OrderHelpComponent } from './modals/order-help/order-help.component';
 import { VenueAndSeatComponent } from './modals/venue-and-seat/venue-and-seat.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomePage {
   seatLocated = true;
 
   constructor(
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -46,7 +48,7 @@ export class HomePage {
    * 
    */
   logIn() {
-
+    this.router.navigateByUrl('/login');
   }
 
   /**

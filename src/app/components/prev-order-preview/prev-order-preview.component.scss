@@ -1,0 +1,36 @@
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 85%);
+    background: #F8F8F8;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+}
+.logo {
+    background: url('../../../assets/photos/pizza-ph.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 50px; width: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.green-btn-outline {
+    font-size: 0.7em;
+    height: 10px;
+    width: 100%;
+}
+h4 {
+    font-size: 0.8em;
+    font-size: #333;
+    margin: 0;
+}
+.date {
+    margin: 0;
+    font-size: 0.7em;
+    color: #999;
+}
+.order-items {
+    font-size: 0.8em;
+    color: #777;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-forgot',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
   ngOnInit() {}
+
+  close() {
+    return this.modalCtrl.dismiss(null, 'cancel');
+  }
 
 }

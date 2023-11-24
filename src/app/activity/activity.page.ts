@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['activity.page.scss']
 })
 export class ActivityPage {
-  loggedIn = false;
+  loggedIn = true;
+  orders = [
+    'one', 'two', 'one', 'two', 'one', 'two', 'one', 'two',
+  ]
 
   constructor() { }
 

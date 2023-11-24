@@ -1,0 +1,32 @@
+ion-toolbar {
+    --background: none;
+}
+.profile-info {
+    .photo {
+        height: 50px;
+        width: 50px;
+        background: url('../../../../assets/photos/sasha_pro_pic.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 100px;
+    }
+}
+.order-info {
+    height: auto;
+
+    ion-col {
+        border-radius: 5px;
+        border: 1px solid rgba(153, 153, 153, 0.50);
+    }
+
+}
+.payment {
+    height: auto;
+
+
+}
+.total {
+    height: auto;
+
+
+}

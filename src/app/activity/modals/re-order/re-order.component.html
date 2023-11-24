@@ -1,3 +1,107 @@
-<p>
-  re-order works!
-</p>
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+    <ion-row class="profile-info ion-justify-content-center">
+        <ion-col size="11">
+            <ion-row class="ion-justify-content-center ion-align-items-center">
+                <ion-col size="2">
+                    <div class="photo"></div>
+                </ion-col>
+                <ion-col size="10">
+                    <h2 style="margin: 0;">Little Caesar's</h2>
+                    <p style="margin: 0;">Sasha Williams</p>
+                </ion-col>
+            </ion-row>
+            <div class="spc-1"></div>
+            <ion-row class="ion-justify-content-center ion-align-items-center">
+            <ion-col size="4">
+              <b>Section</b><br>
+              <span  style="font-size: 1.5em;">213</span><br>
+            </ion-col>
+            <ion-col size="4">
+              <b>Row</b><br>
+              <span  style="font-size: 1.5em;">2</span><br>
+            </ion-col>
+            <ion-col size="4">
+              <b>Seat</b><br>
+              <span  style="font-size: 1.5em;">14</span><br>
+            </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+    <div class="spc-1"></div>
+    <ion-row class="order-info ion-justify-content-center">
+        <ion-col size="11">
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <p>Confirmation #</p>
+                </ion-buttons>
+                <ion-buttons slot="end">
+                    <h3>XCSDW124D</h3>
+                </ion-buttons>
+            </ion-toolbar>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <p>Order Status</p>
+                </ion-buttons>
+                <ion-buttons slot="end">
+                    <b style="color: #6C00C1;">Out for Delivery</b>
+                </ion-buttons>
+            </ion-toolbar>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <p>Delivery Preference</p>
+                </ion-buttons>
+                <ion-buttons slot="end">
+                    <p>Meet in Aisle</p>
+                </ion-buttons>
+            </ion-toolbar>
+            <div class="spc-1"></div>
+            <app-order-item-preview *ngFor="let item of orderItems"></app-order-item-preview>
+            <div class="spc-1"></div>
+        </ion-col>
+    </ion-row>
+    <ion-row class="payment ion-justify-content-center ion-align-items-center">
+        <ion-col size="11">
+            <p>Payment Method: **** 1245
+                <img src="../../../../assets/icon/visa.png" alt="Card Logo" height="30">
+            </p>
+        </ion-col>
+    </ion-row>
+    <ion-row class="total ion-justify-content-center">
+        <ion-col size="11">
+            <ion-list>
+                <ion-item>
+                    <ion-label>Subtotal</ion-label>
+                    <h3>$14.99</h3>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Taxes</ion-label>
+                    <h3>$0.89</h3>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Tip</ion-label>
+                    <h3>$1.49</h3>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Service</ion-label>
+                    <h3>$2.99</h3>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Total</ion-label>
+                    <h3>$20.36</h3>
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+            <ion-button (click)="confirmReOrder()" class="green-btn-gradient" expand="block" shape="round">
+                Re-order
+            </ion-button>
+            <ion-button (click)="close()" class="grey-btn" expand="block" shape="round">
+                Close
+            </ion-button>
+        </ion-col>
+        <div class="bottom-page-spc"></div>
+    </ion-row>
+</ion-content>

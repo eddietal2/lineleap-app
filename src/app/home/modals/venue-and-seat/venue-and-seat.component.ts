@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
-
 @Component({
   selector: 'app-venue-and-seat',
   templateUrl: './venue-and-seat.component.html',
@@ -9,8 +8,6 @@ import { ModalController } from '@ionic/angular';
 })
 export class VenueAndSeatComponent  implements OnInit {
   pageHeader = "Help";
-
-
 
   constructor(
     public modalCtrl: ModalController) { }

@@ -1,3 +1,26 @@
-<ion-content [fullscreen]="true">
+<ion-content>
   <app-seat-info-toolbar></app-seat-info-toolbar>
+  <div class="top-spc"></div>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <h2>Vendors</h2>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="filter()">
+            <ion-icon name="filter-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-searchbar placeholder="Search Vendors" [debounce]="250" showCancelButton="always"></ion-searchbar>
+      <app-vendor-preview 
+        *ngFor="let vendor of vendors">
+      </app-vendor-preview>
+      <ion-button class="green-btn-gradient" (click)="login()" expand="block" fill="clear" shape="round">
+        Log in or create a Line Leap account
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="bottom-page-spc"></div>
 </ion-content>

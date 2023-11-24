@@ -1,0 +1,13 @@
+ion-toolbar {
+    --background: none;
+    ion-icon {
+        color: #999;
+    }
+}
+
+.green-btn-gradient {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    width: 90%;
+}
