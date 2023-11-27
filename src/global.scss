@@ -44,7 +44,7 @@ ion-input {
     border: 1px solid #CACACA;
     background: #FBFBFB;
     margin: 0.5rem 0;
-    --padding-start: 1em;
+    --padding-start: 1em !important;
 }
 ion-button {
     height: 50px;
@@ -60,6 +60,10 @@ ion-button {
     --color: #fff;
     --background: linear-gradient(180deg, #11CF00 0%, #0C9700 100%);
 }
+.red-btn-gradient {
+    margin: 1rem 0;
+    --color: #fff;
+    --background: linear-gradient(180deg, #DC1010 0%, #7B0000 100%);}
 .green-btn-outline {
     margin: 1rem 0;
     --color: #11CF00;
@@ -71,6 +75,13 @@ ion-button {
 .grey-btn {
     --color: #999;
     --background: #F9F9F9;
+}
+.item-btn {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(153, 153, 153, 0.50);
+    background: #F8F8F8;
+    margin: 0.5em 0;
 }
 
 .modal-btm-btns{

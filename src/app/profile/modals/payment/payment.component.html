@@ -1,4 +1,88 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
-<ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
-  Close
-</ion-button>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+    <swiper-container #referralSlider>
+      <!-- 0 -->
+      <swiper-slide>
+        <p>A Maximum of 2 cards are allowed.</p>
+        <ion-list>
+          <ion-item (click)="viewMethod()" [button]="true" lines="none" class="item-btn">
+            <ion-label>
+              <img src="../../../../assets/icon/visa.png" alt="" srcset="">
+              **** 1234</ion-label>
+          </ion-item>
+          <ion-item (click)="viewMethod()" [button]="true" lines="none" class="item-btn">
+            <ion-label>
+              <img src="../../../../assets/icon/visa.png" alt="" srcset="">
+              **** 1234</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-button (click)="addMethod()" expand="block" class="green-btn-gradient" shape="round">
+          Add Method
+        </ion-button>
+      </swiper-slide>
+      <!-- 1 -->
+      <swiper-slide>
+        <ion-label>
+          <img src="../../../../assets/icon/visa.png" alt="" srcset="">
+          **** 1234</ion-label>
+          <h3 style="color: #999;">EXP Date - 10/2026</h3>
+          <div class="spc-2"></div>
+        <ion-button (click)="close()" expand="block" class="red-btn-gradient" shape="round">
+          Remove
+        </ion-button>
+        <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+          Edit
+        </ion-button>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+      <!-- 2 -->
+      <swiper-slide>
+        <ion-list>
+          <ion-list>
+            <p>What type of payment method would you like to add?</p>
+            <ion-item (click)="addMethodType()" [button]="true" lines="none" class="item-btn">
+              <ion-label>Credit / Debit</ion-label>
+            </ion-item>
+            <ion-item (click)="addMethodType()" [button]="true" lines="none" class="item-btn">
+              <ion-label>Cashapp</ion-label>
+            </ion-item>
+            <ion-item (click)="addMethodType()" [button]="true" lines="none" class="item-btn">
+              <ion-label>Paypal</ion-label>
+            </ion-item>
+            <ion-item (click)="addMethodType()" [button]="true" lines="none" class="item-btn">
+              <ion-label>Apple</ion-label>
+            </ion-item>
+            <ion-item (click)="addMethodType()" [button]="true" lines="none" class="item-btn">
+              <ion-label>Google</ion-label>
+            </ion-item>
+          </ion-list>
+       
+        </ion-list>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+      <!-- 3 -->
+      <swiper-slide>
+        <ion-input type="text" placeholder="Enter Payment Info [Come back later]"></ion-input>
+        <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+          Submit
+        </ion-button>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+    </swiper-container>
+
+    <div class="bottom-page-spc"></div>
+    <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+      Close
+    </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

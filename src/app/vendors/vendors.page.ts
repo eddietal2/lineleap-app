@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { VendorsServiceService } from 'src/services/vendors/vendors-service.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class VendorsPage {
     'one', 'two', 'one', 'two', 'one', 'two', 'one', 'two',
   ]
   constructor(
-    private vendorsService: VendorsServiceService
+    private vendorsService: VendorsServiceService,
+    private router: Router
   ) {}
 
   login() {
@@ -21,5 +23,9 @@ export class VendorsPage {
 
   filter() {
 
+  }
+
+  viewVendor() {
+    this.router.navigateByUrl('/vendor-page');
   }
 }

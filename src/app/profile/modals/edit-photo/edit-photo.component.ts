@@ -8,7 +8,8 @@ import { ModalController, ToastController } from '@ionic/angular';
 })
 export class EditPhotoComponent  implements OnInit {
   pageHeader = "Edit Photo";
-
+  proPicUploaded = false;
+  
   constructor(
     public modalCtrl: ModalController,
     private toastCtrl: ToastController

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -7,13 +7,16 @@ import { ModalController, ToastController } from '@ionic/angular';
   styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent  implements OnInit {
+  @ViewChild('referralSlider') swiperRef: ElementRef | undefined;
   pageHeader = "Payment Methods";
 
   constructor(
     public modalCtrl: ModalController,
     private toastCtrl: ToastController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.swiperRef?.nativeElement.swiper.setTransition(0);
+  }
 
   async done() {
     this.close();
@@ -29,7 +32,18 @@ export class PaymentComponent  implements OnInit {
         toast.present();
       });
   }
-
+  back() {
+    this.swiperRef?.nativeElement.swiper.slideTo(0);
+  }
+  viewMethod() {
+    this.swiperRef?.nativeElement.swiper.slideTo(1);
+  }
+  addMethod() {
+    this.swiperRef?.nativeElement.swiper.slideTo(2);
+  }
+  addMethodType() {
+    this.swiperRef?.nativeElement.swiper.slideTo(3);
+  }
   close() {
     return this.modalCtrl.dismiss(null, 'cancel');
   }

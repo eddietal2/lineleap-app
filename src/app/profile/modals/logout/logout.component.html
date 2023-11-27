@@ -1,4 +1,14 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
-<ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
-  Close
-</ion-button>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <h2>Are you sure you want to log out?</h2>
+      <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+        Logout
+      </ion-button>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Close
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

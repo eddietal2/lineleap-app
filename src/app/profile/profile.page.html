@@ -9,39 +9,39 @@
       </ion-button>
     </ion-col>
   </ion-row>
-  <ion-row *ngIf="this.loggedIn" class="ion-justify-content-center ion-align-items-center">
+  <ion-row *ngIf="this.loggedIn" class="item-info ion-justify-content-center ion-align-items-center">
     <ion-col size="3" class="ion-text-center">
       <div class="pro-pic"></div>
     </ion-col>
     <ion-col size="8" class="">
       <h2>Sasha Williams</h2>
-      <p>Location</p>
-      <p>Phone</p>
-      <p>Email</p>
+      <p>Detroit, MI</p>
+      <p>(313)423-2323</p>
+      <p>useremail.com</p>
     </ion-col>
   </ion-row>
   <ion-row *ngIf="this.loggedIn" class="ion-justify-content-center">
     <ion-col size="11" class="ion-text-center">
       <ion-list>
-        <ion-item (click)="referral()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="referral()" class="item-btn" [button]="true" lines="none">
           <ion-label>Referral</ion-label>
         </ion-item>
-        <ion-item (click)="editProfile()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="editProfile()" class="item-btn" [button]="true" lines="none">
           <ion-label>Edit Profile</ion-label>
         </ion-item>
-        <ion-item (click)="editPhoto()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="editPhoto()" class="item-btn" [button]="true" lines="none">
           <ion-label>Edit Photo ID</ion-label>
         </ion-item>
-        <ion-item (click)="notifications()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="notifications()" class="item-btn" [button]="true" lines="none">
           <ion-label>Notifications</ion-label>
         </ion-item>
-        <ion-item (click)="payment()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="payment()" class="item-btn" [button]="true" lines="none">
           <ion-label>Payment Methods</ion-label>
         </ion-item>
-        <ion-item (click)="logout()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="logout()" class="item-btn" [button]="true" lines="none">
           <ion-label>Logout</ion-label>
         </ion-item>
-        <ion-item (click)="deleteProfile()" class="profile-btn" [button]="true" lines="none">
+        <ion-item (click)="deleteProfile()" class="item-btn" [button]="true" lines="none">
           <ion-label color="danger">Delete Profile</ion-label>
         </ion-item>
       </ion-list>

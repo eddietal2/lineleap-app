@@ -1,4 +1,22 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
-<ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
-  Close
-</ion-button>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <ion-list>
+        <ion-item class="item-btn" lines="none">
+          <ion-label>Order Status</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+        <ion-item class="item-btn" lines="none">
+          <ion-label>Other</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </ion-list>
+
+      <div class="bottom-page-spc"></div>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Close
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,4 +1,68 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
-<ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
-  Close
-</ion-button>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+    <swiper-container #referralSlider>
+      <!-- 0 -->
+      <swiper-slide>
+        <ion-list>
+          <ion-item (click)="next('have')" [button]="true" lines="none" class="item-btn">
+            <ion-label>I have a referral code.</ion-label>
+          </ion-item>
+          <ion-item (click)="next('send')" [button]="true" lines="none" class="item-btn">
+            <ion-label>I want to send a referral code.</ion-label>
+          </ion-item>
+        </ion-list>
+      </swiper-slide>
+      <!-- 1 -->
+      <swiper-slide>
+        <ion-input *ngIf="!this.sendingCode" type="text" placeholder="Enter Referral Code"></ion-input>
+        <ion-input *ngIf="this.sendingCode" type="text" placeholder="Enter Referral Code"></ion-input>
+        <ion-button (click)="confirmCode()" expand="block" class="green-btn-gradient" shape="round">
+          Submit
+        </ion-button>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+      <!-- 2 -->
+      <swiper-slide>
+        <ion-list>
+          <p>How do you want to send the referral code?</p>
+          <ion-item (click)="sendReferralType('sms')" [button]="true" lines="none" class="item-btn">
+            <ion-label>SMS / Text</ion-label>
+          </ion-item>
+          <ion-item (click)="sendReferralType('email')" [button]="true" lines="none" class="item-btn">
+            <ion-label>Email</ion-label>
+          </ion-item>
+          <ion-item (click)="sendReferralType('fb')" [button]="true" lines="none" class="item-btn">
+            <ion-label>Facebook</ion-label>
+          </ion-item>
+          <ion-item (click)="sendReferralType('insta')" [button]="true" lines="none" class="item-btn">
+            <ion-label>Instagram</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+      <!-- 3 -->
+      <swiper-slide>
+        <ion-input type="text" placeholder="Enter Referral Info [Come back later]"></ion-input>
+        <ion-button (click)="confirmCode()" expand="block" class="green-btn-gradient" shape="round">
+          Submit
+        </ion-button>
+        <ion-button (click)="back()" expand="block" class="green-btn-outline" shape="round">
+          Back
+        </ion-button>
+      </swiper-slide>
+    </swiper-container>
+
+    <div class="bottom-page-spc"></div>
+    <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+      Close
+    </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

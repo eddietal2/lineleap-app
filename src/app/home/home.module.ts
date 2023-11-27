@@ -29,7 +29,6 @@ import { ConfirmComponent } from './modals/confirm/confirm.component';
     UpdateSeatComponent,
     ConfirmComponent
   ],
-
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePageModule {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -6,12 +6,17 @@ import { ModalController, ToastController } from '@ionic/angular';
   templateUrl: './referral.component.html',
   styleUrls: ['./referral.component.scss'],
 })
-export class ReferralComponent  implements OnInit {
+export class ReferralComponent  implements OnInit, AfterViewInit {
+  @ViewChild('referralSlider') swiperRef: ElementRef | undefined;
   pageHeader = "Referrals";
+  sendingCode = false;
 
   constructor(
     public modalCtrl: ModalController,
     private toastCtrl: ToastController) { }
+    
+  ngAfterViewInit(): void {
+  }
 
   ngOnInit() {}
 
@@ -28,6 +33,32 @@ export class ReferralComponent  implements OnInit {
       .then(() => {
         toast.present();
       });
+  }
+
+  next(type: string) {
+    if(type === 'have') {
+      this.swiperRef?.nativeElement.swiper.slideTo(1);
+    } else {
+      this.swiperRef?.nativeElement.swiper.slideTo(2);
+    }
+  }
+  back() {
+    this.swiperRef?.nativeElement.swiper.slideTo(0);
+  }
+
+  sendReferralType(type: string) {
+    console.log(type);
+    this.swiperRef?.nativeElement.swiper.slideTo(3);
+  }
+
+  sendNewReferral() {
+    
+  }
+
+  confirmCode() {
+    // Confirm Code, then close
+    // Alert or Toast?
+    this.close();
   }
 
   close() {

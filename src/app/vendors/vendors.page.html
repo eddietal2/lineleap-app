@@ -15,6 +15,7 @@
       </ion-toolbar>
       <ion-searchbar placeholder="Search Vendors" [debounce]="250" showCancelButton="always"></ion-searchbar>
       <app-vendor-preview 
+        (click)="viewVendor()"
         *ngFor="let vendor of vendors">
       </app-vendor-preview>
       <ion-button class="green-btn-gradient" (click)="login()" expand="block" fill="clear" shape="round">

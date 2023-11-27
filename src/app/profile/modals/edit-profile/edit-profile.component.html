@@ -1,4 +1,22 @@
 <app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
-<ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
-  Close
-</ion-button>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-input type="text" placeholder="Email"></ion-input>
+      <ion-input type="text" placeholder="Phone"></ion-input>
+      <ion-input type="text" placeholder="City"></ion-input>
+      <ion-input type="text" placeholder="State"></ion-input>
+      <ion-input type="text" placeholder="Zip"></ion-input>
+      <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+        Save
+      </ion-button>
+
+      <div class="bottom-page-spc"></div>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Close
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
