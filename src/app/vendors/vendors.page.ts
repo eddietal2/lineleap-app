@@ -9,6 +9,7 @@ import { VendorsServiceService } from 'src/services/vendors/vendors-service.serv
 })
 export class VendorsPage {
   test = "LOL";
+  loggedIn = false;
   vendors = [
     'one', 'two', 'one', 'two', 'one', 'two', 'one', 'two',
   ]

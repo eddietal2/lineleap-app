@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cancel',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cancel.component.scss'],
 })
 export class CancelComponent  implements OnInit {
+  pageHeader = "Cancel Order";
 
-  constructor() { }
+  constructor(
+    public modalCtrl: ModalController,
+    private toastCtrl: ToastController) { }
 
   ngOnInit() {}
+  cancelOrder() {
+    
+  }
+  close() {
+    return this.modalCtrl.dismiss(null, 'cancel');
+  }
 
 }

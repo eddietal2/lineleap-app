@@ -1,0 +1,32 @@
+ion-toolbar {
+    --background: #fff;
+    box-shadow: 1px 1px 10px #999;
+}
+h3 {
+    color: #999;
+}
+.vendor-photo {
+    background: url('../../assets/photos/vendor-photo-2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 100%;
+}
+.d-or-p {
+    border-radius: 50px;
+    border: 1px solid #D8D8D8;
+    background: #F8F8F8;
+    height: auto;
+    width: 100%;
+
+    ion-button {
+        --border-radius: 100px;
+        width: 125px;
+        margin: 0.4em;
+    }
+}
+.login-btn {
+    position: fixed;
+    bottom: 50px;
+    width: 90%;
+}

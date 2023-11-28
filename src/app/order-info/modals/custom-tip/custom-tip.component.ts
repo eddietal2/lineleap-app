@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-custom-tip',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-tip.component.scss'],
 })
 export class CustomTipComponent  implements OnInit {
+  pageHeader = "Custom Tip";
 
-  constructor() { }
+  constructor(
+    public modalCtrl: ModalController,
+    private toastCtrl: ToastController) { }
 
   ngOnInit() {}
-
+  setTipAmount() {
+    
+  }
+  close() {
+    return this.modalCtrl.dismiss(null, 'cancel');
+  }
 }

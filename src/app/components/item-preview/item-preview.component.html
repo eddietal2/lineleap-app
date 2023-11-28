@@ -1,3 +1,15 @@
-<p>
-  item-preview works!
-</p>
+<ion-row>
+  <ion-col [ngClass]="!isSelected ? 'wrapper' : 'selected'" size="12">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="10">
+        <h2>Large Pizza</h2>
+        <p>This is a description of an Item. It goes in details about the item at hand.</p>
+        <b>$14.99</b>
+      </ion-col>
+      <ion-col size="2">
+        <ion-icon *ngIf="!isSelected" size="large" class="non-selected-icon" name="add-circle-outline"></ion-icon>
+        <ion-icon *ngIf="isSelected" size="large" class="selected-icon" name="caret-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>

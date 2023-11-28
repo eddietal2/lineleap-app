@@ -1,3 +1,19 @@
-<p>
-  cancel works!
-</p>
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <p>Cancel your order any time before [the vendor] starts preparing it.
+        <br>
+        <b>
+          Are you sure you want to cancel this order?
+        </b>
+      </p>
+      <ion-button (click)="cancelOrder()" expand="block" class="red-btn-gradient" shape="round">
+        Cancel
+      </ion-button>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Close
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

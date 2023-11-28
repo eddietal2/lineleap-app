@@ -49,6 +49,16 @@ ion-input {
 ion-button {
     height: 50px;
 }
+ion-checkbox {
+    width: 100%;
+    height: 50px;
+    --size: 35px;
+    font-size: 1.3em;
+}
+ion-segment {
+    height: 50px;
+}
+
 .success-toast {
     --background: #11CF00;
     --color: #fff;
@@ -83,6 +93,15 @@ ion-button {
     background: #F8F8F8;
     margin: 0.5em 0;
 }
+.view-order-btn {
+    background: #11CF00;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    font-size: 1.5em;
+}
 
 .modal-btm-btns{
     // align-items: baseline;
@@ -107,6 +126,9 @@ ion-button {
 }
 
 // UI
+.line {
+    border-bottom: 1px solid #f6f6f6;
+}
 .no-order-bg {
     border-radius: 5px;
     background: #F8F8F8;

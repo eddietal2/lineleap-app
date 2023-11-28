@@ -1,3 +1,15 @@
-<p>
-  custom-tip works!
-</p>
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <h2>How much do you want to tip?</h2>
+      <ion-input type="text" placeholder="$ Tip Amount"></ion-input>
+      <ion-button (click)="setTipAmount()" expand="block" class="green-btn-gradient" shape="round">
+        Submit
+      </ion-button>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Close
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

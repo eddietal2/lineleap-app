@@ -1,0 +1,31 @@
+.pro-pic{
+    background: url('../../assets/photos/sasha_pro_pic.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    height: 50px; width: 50px;
+    text-align: center;
+    display: inline-block;
+
+}
+.del-pref-desc {
+    font-size: 0.7em;
+    color: #999;
+    margin: 0;
+    position: relative;
+    bottom: 0.6em;
+}
+// Segment Button Active Button
+:host {
+    // Update the background color of the segment buttons
+    ::part(indicator-background) {
+      background: linear-gradient(180deg, #11CF00 0%, #0C9700 100%);;
+    }
+    
+    // Update the text color of the selected segment button
+    ion-segment ion-segment-button.segment-button-checked {
+      color: var(--ion-color-light);
+      font-size: 1em;
+    }
+  }

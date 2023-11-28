@@ -1,3 +1,28 @@
-<p>
-  payment works!
-</p>
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <div class="spc-1"></div>
+      <ion-checkbox 
+      justify="space-between" 
+      labelPlacement="start">
+        <h5>**** 1234 
+          <img src="../../../../assets/icon/visa.png" alt="" srcset="">
+        </h5>
+      </ion-checkbox>
+      <ion-checkbox 
+      justify="space-between" 
+      labelPlacement="start">
+        <h5>**** 1234 
+          <img src="../../../../assets/icon/visa.png" alt="" srcset="">
+        </h5>
+      </ion-checkbox>
+      <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+      Done
+      </ion-button>
+      <ion-button (click)="close()" expand="block" class="green-btn-outline" shape="round">
+      Add Payment Method
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -18,7 +18,7 @@
         (click)="viewVendor()"
         *ngFor="let vendor of vendors">
       </app-vendor-preview>
-      <ion-button class="green-btn-gradient" (click)="login()" expand="block" fill="clear" shape="round">
+      <ion-button *ngIf="this.loggedIn" class="green-btn-gradient" (click)="login()" expand="block" fill="clear" shape="round">
         Log in or create a Line Leap account
       </ion-button>
     </ion-col>

@@ -1,0 +1,30 @@
+.wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #D8D8D8;
+    background: #F8F8F8;
+    margin: 0.5em auto;
+    padding: 1em;
+}
+.selected {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #11CF00;
+    background: #F8F8F8;
+    margin: 0.5em auto;
+    padding: 1em;
+}
+.non-selected-icon {
+    color: #222;
+}
+.selected-icon {
+    color: #11CF00;
+}
+ion-button {
+    height: 32px;
+    width: 72px;
+    font-size: 0.75em;
+    --border-radius: 100px;
+}

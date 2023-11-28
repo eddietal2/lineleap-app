@@ -1,13 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>vendor-page</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="back()">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      Back
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <h3>Menu</h3>
+  </ion-buttons>
+</ion-toolbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">vendor-page</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" style="padding: 0;">
+      <div class="vendor-photo"></div>
+    </ion-col>
+    <ion-col size="11">
+      <h1>Little Caesar's</h1>
+      <p>Please choose how'd you like to order</p>
+      <div class="d-or-p ion-text-center">
+        <ion-button [ngClass]="this.isDelivery ? 'green-btn-gradient' : 'green-btn-outline'" (click)="setDelivery()">
+          Delivery
+        </ion-button>
+        <span style="width: 25px"></span>
+        <ion-button [ngClass]="this.isDelivery ? 'green-btn-outline' : 'green-btn-gradient'" (click)="setPickup()">
+          Pickup
+        </ion-button>
+      </div>
+
+      <div class="spc-1"></div>
+      <h3>Selected Items</h3>
+      <app-item-preview [isSelected]="true" (click)="editItem()" *ngFor="let item of selectedItems"></app-item-preview>
+      <div class="spc-1"></div>
+
+      <h3>Menu Items</h3>
+      <app-item-preview (click)="viewItem()" *ngFor="let item of menu"></app-item-preview>
+
+      <ion-button *ngIf="!loggedIn" (click)="logIn()" expand="block" class="login-btn green-btn-gradient" shape="round">
+        Log in to Order
+      </ion-button>
+
+      <div class="bottom-page-spc"></div>
+
+    </ion-col>
+  </ion-row>
+  <!-- TODO: Add to service -->
+  <ion-row *ngIf="loggedIn" (click)="viewOrder()" class="view-order-btn ion-align-items-center">
+    <ion-col class="ion-text-center" size="3">
+        1
+    </ion-col>
+    <ion-col class="ion-text-center" size="6">
+      View Order
+    </ion-col>
+    <ion-col class="ion-text-center" size="3">
+      $14.99
+    </ion-col>
+  </ion-row>
 </ion-content>

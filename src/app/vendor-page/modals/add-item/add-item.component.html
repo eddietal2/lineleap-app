@@ -1,0 +1,47 @@
+<app-modal-header [modal]="this.modalCtrl" [pageHeader]="this.pageHeader"></app-modal-header>
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" style="padding: 0;">
+      <div class="vendor-photo"></div>
+    </ion-col>
+    <ion-col size="11">
+      <h1>Large Pizza</h1>
+      <p>This is a description of an Item. It goes in details about the item at hand. This is a description of an Item. It goes in details about the item at hand.</p>
+      <div class="spc-1"></div>
+
+      <h2>Quantity</h2>
+      <ion-button (click)="addQ()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+      <span class="q-number">1</span>
+      <ion-button (click)="minusQ()">
+        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+      </ion-button>
+      <div class="spc-1"></div>
+
+      <h2>Order Options</h2>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <ion-checkbox justify="space-between" labelPlacement="start">Option</ion-checkbox>
+      <div class="spc-1"></div>
+      
+      <ion-textarea rows="10" placeholder="Any Special Requests?"></ion-textarea>
+      <div class="spc-1"></div>
+      <hr class="line">
+
+      <ion-button (click)="close()" expand="block" class="green-btn-gradient" shape="round">
+        Add to Order
+      </ion-button>
+      <ion-button (click)="close()" expand="block" class="grey-btn" shape="round">
+        Cancel
+      </ion-button>
+
+      <div class="spc-5"></div>
+    </ion-col>
+  </ion-row>
+  <div class="bottom-page-spc"></div>
+</ion-content>
