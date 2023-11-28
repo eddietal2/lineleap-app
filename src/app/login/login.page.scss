@@ -29,7 +29,9 @@
 .bottom-section {
     // margin-top: 2em;
 }
-
+ion-item {
+    --background: none;
+}
 ion-input {
     --padding-start: 1em;
     --color: #999;

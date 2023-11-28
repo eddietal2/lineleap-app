@@ -12,7 +12,7 @@ import { ConfirmComponent } from './modals/confirm/confirm.component';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  loggedIn = true;
+  loggedIn = false;
   seatLocated = true;
   orderPlaced = true;
   isDelivery = true;

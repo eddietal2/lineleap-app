@@ -1,18 +1,23 @@
 <ion-content>
   <ion-row class="fullscreen ion-justify-content-center">
     <ion-col size="11">
-      <section class="top-section">
+      <div class="spc-1"></div>
         <div class="logo"></div>
-        <ion-input type="text" placeholder="Email"></ion-input>
-        <ion-input type="text" placeholder="Password"></ion-input>
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+          <ion-input required formControlName="email" type="text" placeholder="Email"></ion-input>
+          <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+            <ion-text color="danger" class="form-error">
+              Please enter a valid email address.
+            </ion-text>
+          </div>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </form>
         <ion-button (click)="attemptLogin()" class="green-btn-gradient" expand="block" shape="round">
           Login
         </ion-button>
         <ion-button (click)="forgotPassword()" class="grey-btn" expand="block" fill="clear" shape="round">
           Forgot Password
         </ion-button>
-      </section>
-      <section class="bottom-section">
         <ion-button (click)="signUp()" class="green-btn-outline"  expand="block" fill="clear" shape="round">
           Sign Up
         </ion-button>
@@ -28,7 +33,6 @@
         <ion-button (click)="close()" style="color: #999;" expand="block" fill="clear" shape="round">
           Close
         </ion-button>
-      </section>
     </ion-col>
   </ion-row>
 </ion-content>
